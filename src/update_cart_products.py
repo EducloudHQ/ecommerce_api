@@ -28,7 +28,7 @@ def record_handler(record: SQSRecord):
         logger.debug(item)
         logger.debug(f"product id {item['productId']}")
         response = table.update_item(
-            Key={
+        Key={
                 # "PK": f"USER#{item['user_id']}",
                 "PK": f"USER#test@gmail.com",
                 "SK": f"PRODUCT#{item['productId']}",
