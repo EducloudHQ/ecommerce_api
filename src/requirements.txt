@@ -2,4 +2,5 @@ pre-commit
 aws-lambda-powertools[tracer]
 aws-lambda-powertools[logger]
 aws-lambda-powertools[metrics]
+aws-lambda-powertools[parser]
 boto3
