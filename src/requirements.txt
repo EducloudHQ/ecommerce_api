@@ -1,2 +1,5 @@
 pre-commit
-black
+aws-lambda-powertools[tracer]
+aws-lambda-powertools[logger]
+aws-lambda-powertools[metrics]
+boto3
