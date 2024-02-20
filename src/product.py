@@ -70,7 +70,6 @@ def get_product(product_id: str):
     logger.debug(f"product id {product_id}")
 
     try:
-
         item = table.get_item(Key={"PK": f"PRODUCT", "SK": f"PRODUCT#{product_id}"})
 
         return {

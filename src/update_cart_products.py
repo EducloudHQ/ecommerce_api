@@ -28,7 +28,7 @@ def record_handler(record: SQSRecord):
         logger.debug(item)
         logger.debug(f"product id {item['productId']}")
         response = table.update_item(
-        Key={
+            Key={
                 # "PK": f"USER#{item['user_id']}",
                 "PK": f"USER#test@gmail.com",
                 "SK": f"PRODUCT#{item['productId']}",
@@ -45,4 +45,6 @@ def record_handler(record: SQSRecord):
 @logger.inject_lambda_context
 @tracer.capture_lambda_handler
 def lambda_handler(event, context: LambdaContext):
-    return process_partial_response(event=event, record_handler=record_handler, processor=processor, context=context)
+    return process_partial_response(
+        event=event, record_handler=record_handler, processor=processor, context=context
+    )

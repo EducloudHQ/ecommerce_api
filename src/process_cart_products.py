@@ -4,7 +4,7 @@ import os
 import boto3
 from aws_lambda_powertools.utilities.data_classes.dynamo_db_stream_event import (
     DynamoDBStreamEvent,
-    DynamoDBRecordEventName
+    DynamoDBRecordEventName,
 )
 from aws_lambda_powertools import Logger
 
